@@ -74,6 +74,8 @@ Nazwy oznaczone w opisie pojedynczym cudzysłowem(np. 'plik.txt') można dowolni
 * `mv plik.txt mapa` - Przenosi plik 'plik.txt' do folderu mapa
 * `mv projekt.rar gniazdo/projekt2.zip` - Przenosi plik 'projekt.rar' do folderu gniazdo i jednocześnie zmienia jego nazwę na 'projekt2.zip'
 
+![SCR](https://user-images.githubusercontent.com/41945903/65867566-ef2f2080-e376-11e9-9e09-47c8e723e2d0.png)
+
 `cp` - Polecenie używane do tworzenia kopii plików lub folderów w danej lokalizacji
 * `cp plik.txt plik2.txt` - Tworzy kopię pliku 'plik.txt' i zapisuje go pod nazwą 'plik2.txt'
 * `cp Tapety Tapety2 -R` - Kopiuje folder 'Tapety' do folderu 'Tapety2', dzięki opcji -R kopiuje również wszystkie elementy zawierające się w nim
@@ -173,6 +175,11 @@ Nazwy oznaczone w opisie pojedynczym cudzysłowem(np. 'plik.txt') można dowolni
 
 ![SCR](https://user-images.githubusercontent.com/41945903/65830527-a876f300-e2b0-11e9-9529-d8881fcd399d.png)
 
+`nano` - Polecenie otwierające plik w prostym edytorze tekstu(CTRL + X - Wyjście, CTRL + O - Zapis)
+* `nano plik.txt` - Otwiera w edytorze tekstu plik 'plik.txt'
+
+![SCR](https://user-images.githubusercontent.com/41945903/65867899-85fbdd00-e377-11e9-8795-c452e98e1b1c.png)
+
 ## Użytkownicy
 
 `su` - Polecenie do zmiany aktualnego użytkownika(tylko w terminalu)
@@ -185,6 +192,10 @@ Nazwy oznaczone w opisie pojedynczym cudzysłowem(np. 'plik.txt') można dowolni
 * `sudo touch wada.txt` - Tworzy z uprawnieniami administratora plik 'wada.txt', którego inni użytkownicy nie mogą usunąć ani zmodyfikować
 
 ![SCR](https://user-images.githubusercontent.com/41945903/65830674-e32d5b00-e2b1-11e9-9733-eb56da608142.png)
+
+* `sudo !!` - Wykonuje ostatnio uruchomione polecenie z prawami administratora
+
+![SCR](https://user-images.githubusercontent.com/41945903/65867366-8d6eb680-e376-11e9-8524-517fae67ea83.png)
 
 `useradd` - Polecenie do dodawania użytkownika. Aby móc się na dane konto zalogować, należy nadać mu hasło poleceniem `passwd`
 * `useradd stefan` - Dodanie użytkownika 'stefan'
