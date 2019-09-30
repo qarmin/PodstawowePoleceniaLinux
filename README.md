@@ -25,7 +25,7 @@ Umożliwia wpisywanie poleceń w formie tekstowej dlatego zaliczany jest do prog
 
 Często jest on używany przez nieco bardziej zaawansowanych użytkowników, którzy w ten sposób automatyzują masę rzeczy i oszczędzają czas.
 
-W codziennym użytku może pomóc rozwiązać większość problemów, które można napotkać, gdy coś się zepsuje w systemie oraz wykonać niektóre operacje dużo szybciej niż poprzez graficzny interfejs.
+W codziennym użytku może pomóc rozwiązać większość problemów, które można napotkać, gdy coś się zepsuje w systemie oraz wykonać niektóre operacje dużo szybciej niż poprzez graficzny interfejs. Jest to przydatne również podczas reinstalacji systemu, gdyż zamiast żmudnego przeklikiwania się przez różne okna, można za pomocą kilku wcześniej przygotowanych poleceń zainstalować potrzebne programy oraz dostosować system pod siebie.
 
 Trzeba przed rozpoczęciem nauki zapamiętać, że Linux, w przeciwieństwie do Windowsa, rozróżnia wielkość liter w nazwach plików oraz poleceń.
 
@@ -40,10 +40,16 @@ Część podstawowych pojęć oraz proces instalacji GNU/Linuxa jest wyjaśniony
 
 W przypadku błędów o braku dostępu, instrukcję należy poprzedzić poleceniem `sudo` nadającym najwyższe prawa administratora, jednak należy używać tego z rozwagą.
 
+Bardzo przydatne jest również autouzupełnianie komend za pomocą pojedynczego kliknięcia klawisza **TAB**. Gdy istnieje więcej niż jedno możliwe polecenie, naciśnięcie drugi raz klawisza wyświetli nam się listę wszystkich możliwości.
+
+
+![GIF](https://user-images.githubusercontent.com/41945903/65854748-ac148380-e35d-11e9-913b-0dc8e78faad8.gif)
+
 Nazwy oznaczone w opisie pojedynczym cudzysłowem(np. 'plik.txt') można dowolnie modyfikować w poleceniu w zależności od oczekiwanego rezultatu.
 
 ## Podstawowe polecenia
-### Katalogi i pliki
+
+## Katalogi i pliki
 
 `pwd` - Wyświetla ścieżkę w której aktualnie się znajdujemy
 
@@ -52,6 +58,8 @@ Nazwy oznaczone w opisie pojedynczym cudzysłowem(np. 'plik.txt') można dowolni
 `cd` - Polecenie do zmiany aktualnego katalogu
 * `cd ..` - Przechodzi jeden katalog do góry
 * `cd roman/zawory` - Przechodzi do katalogu 'zawory' znajdującego się wewnątrz innego folderu 'roman'
+
+![SCR](https://user-images.githubusercontent.com/41945903/65854290-89ce3600-e35c-11e9-9fe5-b8d6e9cf1cec.png)
 
 `ls` - Polecenie służące do wyświetlenia listy plików i folderów w danym katalogu
 * `ls -A` - Wyświetla wszystkie(również ukryte) pliki i foldery
@@ -71,7 +79,9 @@ Nazwy oznaczone w opisie pojedynczym cudzysłowem(np. 'plik.txt') można dowolni
 * `cp Tapety Tapety2 -R` - Kopiuje folder 'Tapety' do folderu 'Tapety2', dzięki opcji -R kopiuje również wszystkie elementy zawierające się w nim
 
 `mkdir` - Polecenie do tworzenie nowego folderu
-* `mkdir polowy` - Tworzy nowy folder 'polowy'
+* `mkdir polowy drugie` - Tworzy nowy folder 'polowy' oraz folder 'drugie'
+
+![SCR](https://user-images.githubusercontent.com/41945903/65854489-1842b780-e35d-11e9-8185-2a727634e3b4.png)
 
 `rmdir` - Polecenie do usuwania podanego katalogu
 * `rmdir wideo` - Usuwa katalog o nazwie 'wideo'
@@ -98,6 +108,8 @@ Nazwy oznaczone w opisie pojedynczym cudzysłowem(np. 'plik.txt') można dowolni
 * `rm -rf zdjecia` - Usuwa folder 'zdjecia' wraz z zawartością, bez żadnych pytań i ostrzeżeń(opcja -f)
 * `rm plik.txt` - Usuwa plik 'plik.txt'
 
+![SCR](https://user-images.githubusercontent.com/41945903/65854922-204f2700-e35e-11e9-863b-17268a045be8.png)
+
 `ln` - Polecenie tworzące dowiązanie(skrót) do plików lub folderów
 * `ln -s /home/rafal/aplikacja /usr/bin/aplikacja` - Tworzy skrót(dowiązanie symboliczne) do pliku '/home/rafal/aplikacja' w podanej lokalizacji '/usr/bin/aplikacja'
 
@@ -120,7 +132,7 @@ Nazwy oznaczone w opisie pojedynczym cudzysłowem(np. 'plik.txt') można dowolni
 
 ![SCR](https://user-images.githubusercontent.com/41945903/65830677-e4f71e80-e2b1-11e9-8fa4-4fa81141e1b4.png)
 
-### Tekst
+## Tekst
 
 `tail` - Polecenie do wyświetlania ostatnich linijek pliku
 * `tail ffmpeg.sh -n 3` - Wyświetla 3 ostatnie linijki z pliku 'ffmpeg.sh'
@@ -129,6 +141,8 @@ Nazwy oznaczone w opisie pojedynczym cudzysłowem(np. 'plik.txt') można dowolni
 
 `head` - Polecenie do wyświetlania początkowych linijek pliku
 * `head haldric.txt -n 15` - Wyświetla 15 początkowych linijek z pliki 'haldric.txt'
+
+![SCR](https://user-images.githubusercontent.com/41945903/65855233-f8ac8e80-e35e-11e9-9159-fa4526f9e69c.png)
 
 `grep` - Polecenie wyświetlające linie zawierające określone frazy/wyrażenia regularne
 * `ls | grep arch` - Wyświetla tylko te linijki z polecenia 'ls', które zawierają słowo 'arch'
@@ -159,7 +173,7 @@ Nazwy oznaczone w opisie pojedynczym cudzysłowem(np. 'plik.txt') można dowolni
 
 ![SCR](https://user-images.githubusercontent.com/41945903/65830527-a876f300-e2b0-11e9-9529-d8881fcd399d.png)
 
-### Użytkownicy
+## Użytkownicy
 
 `su` - Polecenie do zmiany aktualnego użytkownika(tylko w terminalu)
 * `su rafal` - Zmienia aktualnego użytkownika na 'rafal'
@@ -186,7 +200,7 @@ Nazwy oznaczone w opisie pojedynczym cudzysłowem(np. 'plik.txt') można dowolni
 
 ![SCR](https://user-images.githubusercontent.com/41945903/65830512-76fe2780-e2b0-11e9-9423-9e861ff33333.png)
 
-### Uprawnienia
+## Uprawnieni
 `chmod` - Polecenie do zmiany uprawnień plików i folderów. Liczba je określająca jest trzycyfrowa oznaczająca kolejno uprawnienia dla właściciela, grupy i innych użytkowników i każda z nich składa się z trzech uprawnień do r(4) - odczytu, w(2) - modyfikacji i x(1) - wykonywania danego pliku. Każda z liczb określającej uprawnienia może przyjmować maksymalną wartość 7 a minimalną 0, która to jest sumą poszczególnych uprawnień.
 * `chmod 750 gitRepo -R` - Zmienia uprawnienia folderu 'gitRepo' i wszystkich plików w nim(opcja -R) dla właściciela do odczytu, modyfikacji i wykonywania pliku(7=4+2+1), dla grupy tylko do odczytu i wykownywania(5=4+1) a wszyscy inni nie mogą z niego korzystać
 
@@ -196,7 +210,7 @@ Nazwy oznaczone w opisie pojedynczym cudzysłowem(np. 'plik.txt') można dowolni
 `chgrp` - Polecenie do zmiany grupy pliku i folderu
 * `chgrp root plik.txt` - Zmienia grupę pliku 'plik.txt' na 'root'
 
-### Procesy
+## Procesy
 `top` - Polecenie wyświetla aktualne zużycie procesora CPU, RAM oraz inne informacje o aktualnie uruchomionych procesach
 * `top -d 1` - Zmniejsza czas aktualizacji wykresów do 1 sekundy(parametr -d)
 
@@ -208,7 +222,7 @@ Nazwy oznaczone w opisie pojedynczym cudzysłowem(np. 'plik.txt') można dowolni
 `killall` - Polecenie umożliwiające wysłanie sygnału do procesu o podanej nazwie
 * `killall godot` - Powoduje zakończenie pracy(domyślny tryb) wszystkich procesów o nazwie 'godot'
 
-### Programy i pakiety
+## Programy i pakiety
 `apt` - Polecenie do zarządzania pakietami w systemach pochodzących od Debiana takich jak Ubuntu, Linux Mint czy Zorin OS
 * `apt update` - Aktualizuje listę wersji pakietów i ich zależności oraz podaje ilość pakietów możliwych do aktualizacji
 
@@ -225,7 +239,7 @@ Nazwy oznaczone w opisie pojedynczym cudzysłowem(np. 'plik.txt') można dowolni
 
   * `apt list | grep blender` - Wyświetla wszystkie dostępne pakiety mające w nazwie 'blender'
 
-  ![SCR](https://user-images.githubusercontent.com/41945903/65830298-80869000-e2ae-11e9-9f79-f68c4e9c56b6.png)
+![SCR](https://user-images.githubusercontent.com/41945903/65830298-80869000-e2ae-11e9-9f79-f68c4e9c56b6.png)
 
   * `apt list --upgradable` - Pokazuje listę wszystkich pakietów, których nowsza wersja jest dostępna w repozytorium
 
@@ -233,7 +247,7 @@ Nazwy oznaczone w opisie pojedynczym cudzysłowem(np. 'plik.txt') można dowolni
 
 * `apt install` - Służy do instalacji oprogramowania
   * `apt install blender` - Instaluje pakiet 'blender' wraz z zależnościami z repozytorium
-  
+
 ![SCR](https://user-images.githubusercontent.com/41945903/65830228-da3a8a80-e2ad-11e9-9633-199bda65b6be.png)
 
 * `apt purge blender` - Usuwa pakiet 'blender' wraz z zależnościami, jeśli nie są używane przez inne programy
@@ -255,7 +269,7 @@ Nazwy oznaczone w opisie pojedynczym cudzysłowem(np. 'plik.txt') można dowolni
 
 ![SCR](https://user-images.githubusercontent.com/41945903/65830222-d444a980-e2ad-11e9-8a33-a804d9c23588.png)
 
-### Symbole
+## Symbole
 `&` - Odpina program od okna konsoli, dzięki czemu można ją wyłączyć bez konieczności wyłączenia również programu
 * `firefox &` - Otwiera program 'firefox' i odpina go od konsoli, którą można w każdym momencie wyłączyć
 
@@ -291,7 +305,7 @@ foldery zawierające w nazwie 'i'
 
 ![SCR](https://user-images.githubusercontent.com/41945903/65831125-605acf00-e2b6-11e9-9d98-de22168c2dd6.png)
 
-### Archiwa
+## Archiwa
 `tar` - Polecenie służące do archiwizacji plików i folderów
 * `tar -czvf archiwum.tar.gz /home/lilia/zdjecia.jpg /mnt/pliki` - Pakuje plik '/home/lilia/zdjecia.jpg' oraz katalog '/mnt/pliki' wraz z zawartością do pliku 'archiwum.tar.gz'
 * `tar -czvf szczoteczka.tar.gz /home/ubuntu --exclude=/home/ubuntu/Pobrane` - Pakuje katalog '/home/ubuntu' wraz z zawartością do pliku 'szczoteczka.tar.gz', lecz pomija katalog '/home/ubuntu/Pobrane'(parametr --exclude)
@@ -307,7 +321,7 @@ foldery zawierające w nazwie 'i'
 `unzip` - Polecenie do wypakowania spakowanego pliku ZIP
 * `unzip archiwum.zip -d /home/rafal/Pulpit` - Wypakowuje plik 'archiwum.zip' do folderu '/home/rafal/Pulpit'
 
-### Informacje o systemie
+## Informacje o systemie
 `lsblk` - Polecenie do wyświetlenia listę dysków, partycji oraz zamontowanych woluminów
 * `lsblk -e7` - Wyświetla tylko listę dysków i partycji bez paczek SNAP
 
@@ -331,7 +345,12 @@ foldery zawierające w nazwie 'i'
 
 ![SCR](https://user-images.githubusercontent.com/41945903/65831527-df520680-e2ba-11e9-8977-15a9a60acbe8.png)
 
-### Inne
+## Inne
+
+`clear` - Polecenie do czyszczenia konsoli
+
+![GIF](https://user-images.githubusercontent.com/41945903/65855542-7375a980-e35f-11e9-9f03-d04f4a1b5cd7.gif)
+
 `history` - Polecenie wyświetlające listę ostatnich komend wpisanych do konsoli. W prosty sposób można wyszukiwać ostatnie polecenia za pomocą skrótu klawiszowego CTRL + R
 
 ![SCR](https://user-images.githubusercontent.com/41945903/65829061-a6f1fe80-e2a1-11e9-8f75-bd031ccebe3f.png)
@@ -355,14 +374,12 @@ foldery zawierające w nazwie 'i'
 `unalias` - Polecenie do usuwania stworzonego wcześniej aliasu
 * `unalias infoGPU` - Usuwa alias o nazwie 'infoGPU'
 
-`clear` - Polecenie do czyszczenia konsoli
-
 `man` - Polecenie pokazujące instrukcję dla danego polecenia
 * `man apt` - Wyświetla instrukcję polecenia 'apt'
 
 ![SCR](https://user-images.githubusercontent.com/41945903/65829045-83c74f00-e2a1-11e9-8ed0-98b608860952.png)
 
-`exit` - Polecenie które zamyka kartę lub terminal
+`exit` - Polecenie które zamyka kartę, terminal lub wylogowuje aktualnie zalogowanego użytkownika
 
 ![SCR](https://user-images.githubusercontent.com/41945903/65829016-5084c000-e2a1-11e9-9222-2b9f967bc59b.png)
 
