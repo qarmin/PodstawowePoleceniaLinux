@@ -211,7 +211,7 @@ Nazwy oznaczone w opisie pojedynczym cudzysłowem(np. 'plik.txt') można dowolni
 
 ![SCR](https://user-images.githubusercontent.com/41945903/65830512-76fe2780-e2b0-11e9-9423-9e861ff33333.png)
 
-## Uprawnieni
+## Uprawnienia
 `chmod` - Polecenie do zmiany uprawnień plików i folderów. Liczba je określająca jest trzycyfrowa oznaczająca kolejno uprawnienia dla właściciela, grupy i innych użytkowników i każda z nich składa się z trzech uprawnień do r(4) - odczytu, w(2) - modyfikacji i x(1) - wykonywania danego pliku. Każda z liczb określającej uprawnienia może przyjmować maksymalną wartość 7 a minimalną 0, która to jest sumą poszczególnych uprawnień.
 * `chmod 750 gitRepo -R` - Zmienia uprawnienia folderu 'gitRepo' i wszystkich plików w nim(opcja -R) dla właściciela do odczytu, modyfikacji i wykonywania pliku(7=4+2+1), dla grupy tylko do odczytu i wykownywania(5=4+1) a wszyscy inni nie mogą z niego korzystać
 
